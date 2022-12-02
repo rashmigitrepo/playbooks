@@ -15,6 +15,6 @@
   - name: Create user and set password
     user:
       name: "bob"
-      password: "redhat"
+      password: "redhat | password_hash('sha512')"
       state: present
      
