@@ -7,8 +7,8 @@
     debug: 
       msg: "Hello World\n"
       
-   - name: Create files
-     file:
+  - name: Create files
+    file:
       path: /root/ansible
       state: touch
       
