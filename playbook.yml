@@ -16,6 +16,6 @@
   - name: Create user and set password
     user:
       name: "bob"
-      password: "{{ pass }}" | password_hash('sha512')
+      password: "{{ pass | password_hash('sha512') }}"
       state: present
      
