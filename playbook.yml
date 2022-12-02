@@ -2,6 +2,7 @@
 - name: Test Playbook
   hosts: all
   gather_facts: false
+  
   tasks: 
   - name: Printing a Message
     debug: 
@@ -15,6 +16,6 @@
   - name: Create user and set password
     user:
       name: "bob"
-      password: redhat | password_hash('sha512')
+      password: "{{ pass }}" | password_hash('sha512')
       state: present
      
