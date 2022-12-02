@@ -12,4 +12,9 @@
       path: /root/ansible
       state: touch
       
+  - name: Create user and set password
+    user:
+      name: "bob"
+      password: "redhat"
+      state: present
      
