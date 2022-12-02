@@ -18,5 +18,5 @@
       name: "{{ item }}"
       password: "{{ pass }}"
       state: present
-    loop: "{{ user_name }}"
+    with_items: "{{ user_name }}"
      
