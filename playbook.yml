@@ -15,7 +15,7 @@
       
   - name: Create user and set password
     user:
-      name: "bob"
+      name: "{{ user_name }}"
       password: "{{ pass }}"
       state: present
      
