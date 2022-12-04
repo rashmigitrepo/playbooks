@@ -3,8 +3,8 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: Install httpd and mariadb
+    - name: Install httpd and firewalld
       yum:
         name: "{{ item }}"
         state: present
-      loop: "{{ packages }}"
+      with_items: "{{ packages }}"
