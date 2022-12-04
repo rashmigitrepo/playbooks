@@ -1,0 +1,10 @@
+---
+- name: Install packages
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install httpd and mariadb
+      yum:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages }}"
